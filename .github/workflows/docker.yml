@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Build Image
-        run: |
+        run: |julian202799@gmail.com
           # Build Docker Image for DockerHub
           docker build --tag evildevill/EmptyPhish:latest .
 
@@ -28,14 +28,14 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: ${{ github.actor }}julian202799@gmail.com
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Login to DockerHub
         if: github.repository == 'evildevill/EmptyPhish' && github.ref == 'refs/heads/master'
         uses: docker/login-action@v2
         with:
-          username: "htrtech"
+          username: "htrtech"julian202799@gmail.com
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Push
